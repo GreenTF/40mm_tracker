@@ -1,17 +1,27 @@
 {
-   "Name": "GreenTF.Tone_Tracker",
-   "Description": "A server mod to connect to the Tone Ranking System",
+   "Name": "GreenTF.40mmTracking",
+   "Description": "A server mod to connect to the 40mm Tracking api",
    "Version": "0.1.0",
    "DownloadLink": "https://northstar.thunderstore.io/package/download/GreenTF/Tone_Tracker/",
 
    "LoadPriority": 10,
-   "ConVars": [],
+   "ConVars": [
+      {
+         "Name": "40mm_api_url",
+         "DefaultValue": "https://40mm.greenboi.me/api",
+      },
+      {
+         "Name": "40mm_api_key",
+         "DefaultValue": "none",
+         "Flags": 133168
+      }
+   ],
    "Scripts": [
    {
-      "Path": "tone.nut",
+      "Path": "tracking.nut",
       "RunOn": "SERVER && MP",
       "ServerCallback": {
-         "Before": "registerCallbacks",
+         "After": "registerCallbacks",
       }
    }
    ],
