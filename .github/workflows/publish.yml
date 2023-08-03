@@ -29,8 +29,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Upload Thunderstore Package
-        uses: GreenTF/upload-thunderstore-package@v3.1
+        uses: GreenTF/upload-thunderstore-package@ad676fb6814de065430f226de9930cec3c811bb3
         with:
+          repo: northstar.thunderstore.io
           community: northstar
           # Name of the team to publish the mod under
           # This should be modified if your github username is different than your team name on Thunderstore
@@ -40,10 +41,10 @@ jobs:
           # Package version to publish
           version: ${{ github.ref_name }} # This is the tag that was created in the release
           # Description of the mod
-          description: Server mod to connect to the Tone ranking system
+          description: Server mod to connect to the 40mm tracking api
           # Thunderstore API token
           token: ${{ secrets.TS_KEY }} 
           # Directory to wrap the contents of the repo in
           wrap: mods/${{ github.repository_owner }}.${{ env.name }} # This will wrap your Author.ModName folder in a mods/ folder before publishing
           #deps: "northstar-Northstar@1.9.3" # <------------- Uncomment this line to add dependencies to your mod, each sparated by a space
-          categories: "mods Server-side" # <----------------------------- Add more categories as needed, separated by spaces
+          categories: "mods server-side" # <----------------------------- Add more categories as needed, separated by spaces
