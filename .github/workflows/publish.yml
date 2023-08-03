@@ -47,4 +47,6 @@ jobs:
           # Directory to wrap the contents of the repo in
           wrap: mods/${{ github.repository_owner }}.${{ env.name }} # This will wrap your Author.ModName folder in a mods/ folder before publishing
           #deps: "northstar-Northstar@1.9.3" # <------------- Uncomment this line to add dependencies to your mod, each sparated by a space
-          categories: "mods server-side" # <----------------------------- Add more categories as needed, separated by spaces
+          categories: |
+            mods
+            server-side 
