@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Upload Thunderstore Package
-        uses: GreenTF/upload-thunderstore-package@ad676fb6814de065430f226de9930cec3c811bb3
+        uses: GreenTF/upload-thunderstore-package@f891cebfa6d841fed49052437f08488f66ab81c8
         with:
           repo: northstar.thunderstore.io
           community: northstar
